@@ -11,7 +11,7 @@
 
 ## Website Link
 
-![Link](https://theophileaseh.github.io/)
+[Click to see Website](https://theophileaseh.github.io/)
 
 ## Built With
 
