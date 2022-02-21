@@ -9,9 +9,7 @@
 ![Screenshot](./screenshot.png)
 ![Screenshot](./screenshot2.png)
 
-## Website Link
 
-[Click to see Website](https://theophileaseh.github.io/)
 
 ## Built With
 
