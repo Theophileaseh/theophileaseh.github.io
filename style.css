@@ -318,10 +318,11 @@ section .circle2 {
 }
 
 .recent-work .button .main-button {
-  background: #7d73fc;
+  background: #ebf57b;
   padding: 18px;
-  color: white;
+  color: #191765;
   text-decoration: none;
+  font-weight: bolder;
   font-size: 12px;
   transition: all 0.5s ease-out;
 }
@@ -413,8 +414,9 @@ section .circle2 {
   padding: 20px;
   width: max-content;
   margin: 0 auto;
-  background: #7d73fc;
-  color: #fff;
+  background: #ebf57b;
+  color: #191765;
+  font-weight: bolder;
   border: none;
 }
 
