@@ -2,7 +2,7 @@
 
 # Project Name
 
-> Portfolio: setup and mobile version skeleton.
+> Software Developer Portfolio
 
 ## Website Link
 
@@ -10,8 +10,8 @@
 
 ## Screenshot
 
-![Screenshot](./screenshot.png)
-![Screenshot](./screenshot2.png)
+![Screenshot](./images/screenshot.png)
+![Screenshot](./images/screenshot2.png)
 
 
 ## Built With
