@@ -48,7 +48,7 @@ body {
   cursor: pointer;
 }
 
-.mobile-button {
+.mobile-button.active {
   background-image: url("./images/Icon-Cancel.svg");
 }
 
