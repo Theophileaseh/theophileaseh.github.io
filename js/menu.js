@@ -7,7 +7,7 @@ toggleButton.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 
-menuItems.forEach(function (item) {
+menuItems.forEach((item) => {
   item.addEventListener('click', () => {
     toggleButton.classList.remove('active');
     menu.classList.remove('active');  
