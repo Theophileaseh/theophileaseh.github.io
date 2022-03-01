@@ -83,8 +83,7 @@ body {
   align-items: flex-start;
   background: #191765;
   z-index: 100;
-  background-image: url("./images/shapemobilemenu-2.svg"),
-    url("./images/shapemobilemenu-1.svg");
+  background-image: url("./images/shapemobilemenu-2.svg"), url("./images/shapemobilemenu-1.svg");
   background-repeat: no-repeat;
   background-position: left top 80px, right bottom 50px;
   padding-top: 108px;
