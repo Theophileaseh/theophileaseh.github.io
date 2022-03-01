@@ -106,7 +106,7 @@ body.overflow-hidden {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  font-size: 18px;
+  font-size: 15px;
   color: #7d73fc;
 }
 
@@ -553,6 +553,10 @@ section .circle2 {
   .menu-list .nav-items {
     text-decoration: none;
     color: #fff;
+    font-size: 15px !important;
+  }
+
+  .nav-items span {
     font-size: 15px;
   }
 
@@ -560,6 +564,14 @@ section .circle2 {
     color: #3d2795;
     border-bottom: 2px solid #fff;
     padding-bottom: 3px;
+  }
+
+  .nav-items .fa-envelope {
+    display: block;
+  }
+
+  .nav-items i {
+    display: none;
   }
 
   section .circle1 {
