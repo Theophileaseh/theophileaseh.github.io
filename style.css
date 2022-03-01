@@ -7,6 +7,10 @@ body {
   overflow-x: hidden;
 }
 
+body.overflow-hidden {
+  overflow-y: hidden;
+}
+
 .header {
   width: 100%;
   top: 44px;
@@ -53,6 +57,8 @@ body {
 
 .mobile-button.active {
   background-image: url("./images/Icon-Cancel.svg");
+  height: 25px;
+  width: 25px;
 }
 
 .header nav .fa-bars {
@@ -73,7 +79,7 @@ body {
 }
 
 .header .menu-list.active {
-  display: block;
+  display: flex;
   position: absolute;
   left: 0;
   top: 0;
