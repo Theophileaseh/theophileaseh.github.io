@@ -86,8 +86,8 @@ section .circle2 {
 }
 
 .portfolio .author {
-  position: static;
-  top: 0;
+  /*position: static;
+  top: 0;*/
   font-weight: bold;
   font-size: 38px;
   line-height: 72px;
@@ -96,8 +96,8 @@ section .circle2 {
   color: #7d73fc;
   padding-top: 90px;
   margin-left: 25px;
-  padding-left: 100px;
-  padding-right: 100px;
+  /*padding-left: 100px;
+  padding-right: 100px;*/
 }
 
 .portfolio .author:hover {
@@ -319,7 +319,7 @@ section .circle2 {
 }
 
 .recent-work .button .main-button {
-  background: #ebf57b;
+  background: #d7d9ee;
   padding: 18px;
   color: #191765;
   text-decoration: none;
@@ -416,7 +416,7 @@ section .circle2 {
   padding: 20px;
   width: max-content;
   margin: 0 auto;
-  background: #ebf57b;
+  background: #d7d9ee;
   color: #191765;
   font-weight: bolder;
   border: none;
