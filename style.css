@@ -46,6 +46,7 @@ body {
   height: 35px;
   width: 35px;
   cursor: pointer;
+  z-index: 1000;
 }
 
 .mobile-button.active {
@@ -74,12 +75,37 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   background: #191765;
   z-index: 100;
   background-image: url("./images/shapemobilemenu-2.svg"), url("./images/shapemobilemenu-1.svg");
   background-repeat: no-repeat;
   background-position: left top 80px, right bottom 50px;  
+  padding-top: 108px;
+  gap: 52px;
+}
+
+.menu-items {
+  list-style: none;
+  width: 80%;
+}
+
+.nav-items {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 24px;
+  color: #7d73fc;
+}
+
+.nav-items span {
+  font-weight: 500;
+  color: #fff;
+}
+
+.nav-items .fa-envelope {
+  display: none;
 }
 
 .portfolio .author,
