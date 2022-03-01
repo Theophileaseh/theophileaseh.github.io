@@ -133,7 +133,7 @@ section .circle1 {
 }
 
 section .circle2 {
-  position: absolute;
+  position: sticky;
   width: 70px;
   height: 70px;
   background: #edecff;
@@ -141,13 +141,14 @@ section .circle2 {
 
   /* right: -30px; */
   border-radius: 100%;
-  top: 690px;
+  top: 90px;
   left: 353px;
+  margin-right: -70px;
 }
 
 .portfolio .author {
-  position: static;
-  top: 0;
+  /*position: static;
+  top: 0;*/
   font-weight: bold;
   font-size: 38px;
   line-height: 72px;
@@ -156,8 +157,8 @@ section .circle2 {
   color: #7d73fc;
   padding-top: 90px;
   margin-left: 25px;
-  padding-left: 100px;
-  padding-right: 100px;
+  /*padding-left: 100px;
+  padding-right: 100px;*/
 }
 
 .portfolio .author:hover {
@@ -379,7 +380,7 @@ section .circle2 {
 }
 
 .recent-work .button .main-button {
-  background: #ebf57b;
+  background: #d7d9ee;
   padding: 18px;
   color: #191765;
   text-decoration: none;
@@ -420,7 +421,7 @@ section .circle2 {
   position: sticky;
   width: 81.29px;
   height: 227.04px;
-  left: 408.22px;
+  left: 333.22px;
 
   /* top: 3733px; */
   background: #edecff;
@@ -429,6 +430,7 @@ section .circle2 {
   border-radius: 50%;
   margin-top: -480px;
   margin-bottom: 250px;
+  margin-right: -20px;
 }
 
 .footer {
@@ -475,7 +477,7 @@ section .circle2 {
   padding: 20px;
   width: max-content;
   margin: 0 auto;
-  background: #ebf57b;
+  background: #d7d9ee;
   color: #191765;
   font-weight: bolder;
   border: none;
