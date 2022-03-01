@@ -7,6 +7,10 @@ body {
   overflow-x: hidden;
 }
 
+body.overflow-hidden {
+  overflow-y: hidden;
+}
+
 .header {
   width: 100%;
   top: 44px;
@@ -29,12 +33,32 @@ body {
   float: left;
   text-decoration: none;
   font-weight: 700;
-  margin-top: -17px;
 }
 
 .header .logo:hover {
   transition: all 0.5s ease-out;
   transform: rotate(360deg);
+}
+
+.mobile-button {
+  display: block;
+  background-image: url("./images/Icon-Menu.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 1000;
+  position: absolute;
+  right: 38px;
+  top: 50px;
+}
+
+.mobile-button.active {
+  background-image: url("./images/Icon-Cancel.svg");
+  height: 25px;
+  width: 25px;
 }
 
 .header nav .fa-bars {
@@ -51,6 +75,48 @@ body {
 }
 
 .header .menu-list {
+  display: none;
+}
+
+.header .menu-list.active {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #191765;
+  z-index: 100;
+  background-image: url("./images/shapemobilemenu-2.svg"), url("./images/shapemobilemenu-1.svg");
+  background-repeat: no-repeat;
+  background-position: left top 80px, right bottom 50px;
+  padding-top: 108px;
+  gap: 52px;
+}
+
+.menu-items {
+  list-style: none;
+  width: 80%;
+}
+
+.nav-items {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 15px;
+  color: #7d73fc;
+}
+
+.nav-items span {
+  font-weight: 500;
+  color: #fff;
+  font-size: 24px;
+}
+
+.nav-items .fa-envelope {
   display: none;
 }
 
@@ -86,8 +152,6 @@ section .circle2 {
 }
 
 .portfolio .author {
-  /*position: static;
-  top: 0;*/
   font-weight: bold;
   font-size: 38px;
   line-height: 72px;
@@ -96,8 +160,6 @@ section .circle2 {
   color: #7d73fc;
   padding-top: 90px;
   margin-left: 25px;
-  /*padding-left: 100px;
-  padding-right: 100px;*/
 }
 
 .portfolio .author:hover {
@@ -491,6 +553,10 @@ section .circle2 {
   .menu-list .nav-items {
     text-decoration: none;
     color: #fff;
+    font-size: 15px !important;
+  }
+
+  .nav-items span {
     font-size: 15px;
   }
 
@@ -498,6 +564,14 @@ section .circle2 {
     color: #3d2795;
     border-bottom: 2px solid #fff;
     padding-bottom: 3px;
+  }
+
+  .nav-items .fa-envelope {
+    display: block;
+  }
+
+  .nav-items i {
+    display: none;
   }
 
   section .circle1 {
