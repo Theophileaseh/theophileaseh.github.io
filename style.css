@@ -72,7 +72,7 @@ section .circle1 {
 }
 
 section .circle2 {
-  position: absolute;
+  position: sticky;
   width: 70px;
   height: 70px;
   background: #edecff;
@@ -82,6 +82,7 @@ section .circle2 {
   border-radius: 100%;
   top: 690px;
   left: 353px;
+  margin-right: -70px;
 }
 
 .portfolio .author {
@@ -359,7 +360,7 @@ section .circle2 {
   position: sticky;
   width: 81.29px;
   height: 227.04px;
-  left: 408.22px;
+  left: 333.22px;
 
   /* top: 3733px; */
   background: #edecff;
@@ -368,6 +369,7 @@ section .circle2 {
   border-radius: 50%;
   margin-top: -480px;
   margin-bottom: 250px;
+  margin-right: -20px;
 }
 
 .footer {
