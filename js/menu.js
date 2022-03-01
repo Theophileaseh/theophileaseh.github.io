@@ -10,6 +10,6 @@ toggleButton.addEventListener('click', () => {
 menuItems.forEach((item) => {
   item.addEventListener('click', () => {
     toggleButton.classList.remove('active');
-    menu.classList.remove('active');  
+    menu.classList.remove('active');
   });
 });
