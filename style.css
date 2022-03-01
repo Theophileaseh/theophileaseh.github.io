@@ -37,6 +37,21 @@ body {
   transform: rotate(360deg);
 }
 
+.mobile-button {
+  display: block;
+  background-image: url("./images/Icon-Menu.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+
+.mobile-button {
+  background-image: url("./images/Icon-Cancel.svg");
+}
+
 .header nav .fa-bars {
   font-size: 30px;
   color: #f4f4f7;
