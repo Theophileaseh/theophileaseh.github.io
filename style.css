@@ -29,7 +29,6 @@ body {
   float: left;
   text-decoration: none;
   font-weight: 700;
-  margin-top: -17px;
 }
 
 .header .logo:hover {
@@ -47,6 +46,9 @@ body {
   width: 35px;
   cursor: pointer;
   z-index: 1000;
+  position: absolute;
+  right: 38px;
+  top: 50px;
 }
 
 .mobile-button.active {
@@ -67,6 +69,10 @@ body {
 }
 
 .header .menu-list {
+  display: none;
+}
+
+.header .menu-list.active {
   display: block;
   position: absolute;
   left: 0;
@@ -95,13 +101,14 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  font-size: 24px;
+  font-size: 18px;
   color: #7d73fc;
 }
 
 .nav-items span {
   font-weight: 500;
   color: #fff;
+  font-size: 24px;
 }
 
 .nav-items .fa-envelope {
