@@ -79,14 +79,15 @@ body {
   top: 0;
   height: 100vh;
   width: 100%;
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
   align-items: flex-start;
   background: #191765;
   z-index: 100;
   background-image: url("./images/shapemobilemenu-2.svg"), url("./images/shapemobilemenu-1.svg");
   background-repeat: no-repeat;
-  background-position: left top 80px, right bottom 50px;  
+  background-position: left top 80px,
+  right bottom 50px;  
   padding-top: 108px;
   gap: 52px;
 }
@@ -147,8 +148,6 @@ section .circle2 {
 }
 
 .portfolio .author {
-  /*position: static;
-  top: 0;*/
   font-weight: bold;
   font-size: 38px;
   line-height: 72px;
@@ -157,8 +156,6 @@ section .circle2 {
   color: #7d73fc;
   padding-top: 90px;
   margin-left: 25px;
-  /*padding-left: 100px;
-  padding-right: 100px;*/
 }
 
 .portfolio .author:hover {
