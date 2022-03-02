@@ -8,7 +8,7 @@ const projects = [
     technologies: ['css', 'html', 'bootstrap', 'ruby'],
     live_link: '#',
     source_link: '#',
-    circle: "circle3"
+    circle: 'circle3',
   },
   {
     id: 1,
@@ -19,7 +19,7 @@ const projects = [
     technologies: ['css', 'html', 'bootstrap', 'ruby'],
     live_link: '#',
     source_link: '#',
-    circle: "circle4"
+    circle: 'circle4',
   },
   {
     id: 1,
@@ -30,7 +30,7 @@ const projects = [
     technologies: ['css', 'html', 'bootstrap', 'ruby'],
     live_link: '#',
     source_link: '#',
-    circle: "circle5"
+    circle: 'circle5',
   },
   {
     id: 1,
@@ -41,14 +41,16 @@ const projects = [
     technologies: ['css', 'html', 'bootstrap', 'ruby'],
     live_link: '#',
     source_link: '#',
-    circle: "circle6"
+    circle: 'circle6',
   },
 ];
 
 const projectsContainer = document.getElementById('projects-container');
+const modal = document.getElementById('project-modal');
 
-const allProjects = projects.map((project) => {
-  return `
+const allProjects = projects
+  .map((project) => {
+    return `
         <div class="work1">
         <div class="img1">
           <img src="images/${
@@ -68,14 +70,63 @@ const allProjects = projects.map((project) => {
               .join('')}
           </ul>
           <div class="button">
-              <a href="#" class="main-button">See Project</a>
+              <button onclick="showModal(${project.id})" class="main-button">See Project</button>
           </div>
         </div>
       </div>
       <div class="${project.circle}"></div>
   `;
-}).join('');
-
+  })
+  .join('');
 
 projectsContainer.innerHTML = allProjects;
 
+const showModal = (projectId) => {
+  const modalData = projects.find((element) => {
+    if(projectId === element.id) {
+      return true;
+    }
+  });
+
+  modal.innerHTML = modalTemplate(modalData);
+
+};
+
+const modalTemplate = (project) => {
+  return `
+      <div class="modal-container">
+        <div class="modal-head">
+          <h2 class="modal-title">${project.name}</h2>
+          <button id="modal-close" onclick="modalClose()" class="modal-close">
+            <img
+              src="images/Icon-Cancel.svg"
+              alt="Close button"
+              class="modal-close-icon"
+            />
+          </buttton>
+        </div>
+        <div class="modal-body">
+          <img
+            src="images/${project.featured_image}"
+            alt="${project.name}"
+            class="detail-img"
+          />
+          <p class="modal-desc">
+            ${project.description}
+          </p>
+          <ul class="technologies">
+            ${
+              project.technologies.map((technology) => {
+                return `<li class="technology">${technology}</li>`; 
+              })
+            }
+          </ul>
+        </div>
+      </div>
+
+  `;
+}
+
+const modalClose = (source) => {
+  modal.innerHTML = ""; 
+}

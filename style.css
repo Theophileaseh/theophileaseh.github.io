@@ -388,6 +388,8 @@ section .circle2 {
   font-weight: bolder;
   font-size: 12px;
   transition: all 0.5s ease-out;
+  border: none;
+  cursor: pointer;
 }
 
 .recent-work .circle4 {
@@ -529,6 +531,12 @@ section .circle2 {
 
 .desktop-footer {
   display: none;
+}
+
+#modal-close {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 }
 
 @media screen and (min-width: 992px) {
