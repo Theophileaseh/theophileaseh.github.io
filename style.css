@@ -388,6 +388,8 @@ section .circle2 {
   font-weight: bolder;
   font-size: 12px;
   transition: all 0.5s ease-out;
+  border: none;
+  cursor: pointer;
 }
 
 .recent-work .circle4 {
@@ -531,6 +533,7 @@ section .circle2 {
   display: none;
 }
 
+<<<<<<< HEAD
 /* Modal box styles */
 
 .modal-container {
@@ -608,6 +611,12 @@ section .circle2 {
   color: #fff;
   text-decoration: none;
   width: max-content;
+=======
+#modal-close {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+>>>>>>> 4d5243d7681f4900564bbe3dc6c071e61a771633
 }
 
 @media screen and (min-width: 992px) {
