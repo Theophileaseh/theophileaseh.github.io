@@ -13,9 +13,6 @@ body.overflow-hidden {
 
 .header {
   width: 100%;
-
-  /*top: 44px;*/
-
   border-radius: 0;
   padding-top: 35px;
 }
@@ -52,9 +49,6 @@ body.overflow-hidden {
   width: 35px;
   cursor: pointer;
   z-index: 1000;
-
-  /*position: absolute;*/
-
   right: 38px;
   top: 50px;
 }
@@ -542,7 +536,6 @@ section .circle2 {
 .popup-modal {
   padding: 30px;
   z-index: 10000;
-  position: absolute;
   overflow: hidden;
   position: fixed;
   transition: all 0.5s ease;
@@ -550,16 +543,13 @@ section .circle2 {
 
 .modal-container {
   background: rgba(255, 255, 255, 0.16);
-  border: 1px solid #FFFFFF;
-  box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08);
+  border: 1px solid #fff;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
   padding: 23.5px;
 }
 
 .modal-head {
   display: flex;
-  
-  /*align-items: center;*/
-
   margin-bottom: 20px;
 }
 
@@ -596,16 +586,17 @@ section .circle2 {
   padding: 0;
 }
 
-.technologies .technology, .end {
+.technologies .technology,
+.end {
   list-style: none;
-  border-left: 0.5px solid #81818C;
+  border-left: 0.5px solid #81818c;
   padding: 10px 15px;
   color: #fff;
   font-size: 15px;
 }
 
 .end {
-  border-right: 0.5px solid #81818C;  
+  border-right: 0.5px solid #81818c;  
 }
 
 .modal-footer {
