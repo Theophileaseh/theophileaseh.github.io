@@ -537,7 +537,7 @@ section .circle2 {
   padding: 30px;
   z-index: 10000;
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   transition: all 0.5s ease;
 }
 
@@ -629,6 +629,7 @@ section .circle2 {
 .blur {
   filter: blur(35px);
   -webkit-filter: blur(35px);
+  position: fixed;
 }
 
 @media screen and (min-width: 992px) {
@@ -869,15 +870,18 @@ section .circle2 {
     color: #7d73fc;
     background-color: #fff;
   }
-<<<<<<< HEAD
-  
-=======
 
   /* Modal styles */
 
->>>>>>> 280458a946fea17414cb80c70e1f5d3a652ae33f
-  .modal-close {
+  .popup-modal {
+    padding: 112px 142px;
+  }
+
+  #modal-close {
+    padding-left: 15%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .modal-body .modal-desc {
