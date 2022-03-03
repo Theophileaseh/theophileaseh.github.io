@@ -54,20 +54,14 @@ const allProjects = projects
     (project) => `
         <div class="work1">
         <div class="img1">
-          <img src="images/${
-            project.featured_image
-          }" class="image" alt="software-portfolio">
+          <img src="images/${project.featured_image}" class="image" alt="software-portfolio">
         </div>
         <div class="info1">
           <h2 class="sub1">${project.name}</h2>
           <p class="desc1">
             ${project.description}
           </p>
-          <ul class="main-works">${project.technologies
-            .map((technology) => {
-              return `<li class="works">${technology}</li>`;
-            })
-            .join('')}
+          <ul class="main-works">${project.technologies.map((technology) => "<li class='works'>" + technology + "</li>").join('')}
           </ul>
           <div class="button">
               <button onclick="showModal(${
