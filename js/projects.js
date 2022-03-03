@@ -111,8 +111,8 @@ const modalTemplate = (project) => {
             ${project.description}
           </p>
           <ul class="technologies">
-            ${project.technologies.map((technology) => ( 
-              return `<li class="technology">${technology}</li>`; ))}
+            ${project.technologies.map((technology) => { 
+              return `<li class="technology">${technology}</li>`; })}
           </ul>
         </div>
         <div class="modal-footer">
