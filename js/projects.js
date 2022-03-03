@@ -69,7 +69,7 @@ const allProjects = projects
         </div>
       </div>
       <div class="${project.circle}"></div>
-  `
+  `,
   ).join('');
 
 projectsContainer.innerHTML = allProjects;
