@@ -869,8 +869,6 @@ section .circle2 {
     color: #7d73fc;
     background-color: #fff;
   }
-
-  /* Modal styles */
   
   .modal-close {
     display: flex;
