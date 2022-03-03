@@ -88,7 +88,7 @@ const showModal = () => {
   stopScroll.classList.add('blur');
 };
 
-const modalTemplate = (project) => (
+const modalTemplate = (project) => {
   return `
       <div class="modal-container">
         <div class="modal-head">
@@ -127,7 +127,7 @@ const modalTemplate = (project) => (
       </div>
 
   `;
-);
+};
 
 const modalClose = (source) => {
   modal.innerHTML = ''; 
