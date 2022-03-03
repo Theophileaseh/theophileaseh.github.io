@@ -54,9 +54,7 @@ const allProjects = projects
     return `
         <div class="work1">
         <div class="img1">
-          <img src="images/${
-            project.featured_image
-          }" class="image" alt="software-portfolio">
+          <img src="images/${project.featured_image}" class="image" alt="software-portfolio">
         </div>
         <div class="info1">
           <h2 class="sub1">${project.name}</h2>
@@ -64,8 +62,7 @@ const allProjects = projects
             ${project.description}
           </p>
           <ul class="main-works">
-            ${project.technologies
-              .map((technology) => {
+            ${project.technologies.map((technology) => {
                 return `<li class="works">${technology}</li>`;
               })
               .join('')}
@@ -82,7 +79,7 @@ const allProjects = projects
 
 projectsContainer.innerHTML = allProjects;
 
-const showModal = (projectId) => {
+const showModal = () => {
   const modalData = projects.find((element) => {
     if(projectId === element.id) {
       return true;
@@ -118,8 +115,7 @@ const modalTemplate = (project) => {
             ${project.description}
           </p>
           <ul class="technologies">
-            ${
-              project.technologies.map((technology) => {
+            ${project.technologies.map((technology) => {
                 return `<li class="technology">${technology}</li>`; 
               })
             }
@@ -139,7 +135,7 @@ const modalTemplate = (project) => {
   `;
 }
 
-const modalClose = (source) => {
+const modalClose = () => {
   modal.innerHTML = ""; 
   stopScroll.classList.remove('blur');
 }
