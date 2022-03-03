@@ -69,10 +69,10 @@ const allProjects = projects
         </div>
       </div>
       <div class="${project.circle}"></div>
-  `).join('');
+  `
+  ).join('');
 
 projectsContainer.innerHTML = allProjects;
-
 
 const modalTemplate = (project) => `
       <div class="modal-container">
@@ -116,11 +116,12 @@ const modalTemplate = (project) => `
 
 /* eslint-disable no-unused-vars */
 
-const showModal = () => {
+const showModal = (projectId) => {
   const modalData = projects.find((element) => {
-    if (projectId === element.id) {
+    if (Number(projectId) === Number(element.id)) {
       return true;
     }
+    return undefined;
   });
 
   modal.innerHTML = modalTemplate(modalData);
