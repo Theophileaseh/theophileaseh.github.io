@@ -61,11 +61,8 @@ const allProjects = projects
           <p class="desc1">
             ${project.description}
           </p>
-          <ul class="main-works">
-            ${project.technologies.map((technology) => {
-                return `<li class="works">${technology}</li>`;
-              })
-              .join('')}
+          <ul class="main-works">${project.technologies.map((technology) => { return `<li class="works">${technology}</li>`;
+              }).join('')}
           </ul>
           <div class="button">
               <button onclick="showModal(${project.id})" class="main-button">See Project</button>
@@ -81,7 +78,7 @@ projectsContainer.innerHTML = allProjects;
 
 const showModal = () => {
   const modalData = projects.find((element) => {
-    if(projectId === element.id) {
+    if (projectId === element.id) {
       return true;
     }
     
@@ -89,10 +86,9 @@ const showModal = () => {
 
   modal.innerHTML = modalTemplate(modalData);
   stopScroll.classList.add('blur');
-
 };
 
-const modalTemplate = (project) => {
+const modalTemplate = (project) => (
   return `
       <div class="modal-container">
         <div class="modal-head">
@@ -115,10 +111,8 @@ const modalTemplate = (project) => {
             ${project.description}
           </p>
           <ul class="technologies">
-            ${project.technologies.map((technology) => {
-                return `<li class="technology">${technology}</li>`; 
-              })
-            }
+            ${project.technologies.map((technology) => ( 
+              return `<li class="technology">${technology}</li>`; ))}
           </ul>
         </div>
         <div class="modal-footer">
@@ -133,9 +127,9 @@ const modalTemplate = (project) => {
       </div>
 
   `;
-}
+);
 
-const modalClose = () => {
-  modal.innerHTML = ""; 
+const modalClose = (source) => {
+  modal.innerHTML = ''; 
   stopScroll.classList.remove('blur');
-}
+};
