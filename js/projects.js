@@ -47,7 +47,7 @@ const projects = [
 
 const projectsContainer = document.getElementById('projects-container');
 const modal = document.getElementById('project-modal');
-//const stopScroll = document.querySelector('.wrapper');
+const stopScroll = document.querySelector('.wrapper');
 
 const allProjects = projects
   .map((project) => {
@@ -91,7 +91,7 @@ const showModal = (projectId) => {
   });
 
   modal.innerHTML = modalTemplate(modalData);
-  $('.wrapper').addClass('blur');
+  stopScroll.classList.add('blur');
 
 };
 
@@ -141,5 +141,5 @@ const modalTemplate = (project) => {
 
 const modalClose = (source) => {
   modal.innerHTML = ""; 
-  $('.wrapper').removeClass('blur');
+  stopScroll.classList.remove('blur');
 }

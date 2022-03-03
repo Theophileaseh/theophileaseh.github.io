@@ -635,9 +635,9 @@ section .circle2 {
   background-color: transparent;
 }
 
-.wrapper.blur > *:not(.modal-popup) {
-  filter: blur(25px);
-  -webkit-filter: blur(25px);
+.blur {
+  filter: blur(35px);
+  -webkit-filter: blur(35px);
 }
 
 @media screen and (min-width: 992px) {
