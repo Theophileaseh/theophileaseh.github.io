@@ -13,7 +13,9 @@ body.overflow-hidden {
 
 .header {
   width: 100%;
-  top: 44px;
+
+  /*top: 44px;*/
+
   border-radius: 0;
   padding-top: 35px;
 }
@@ -50,7 +52,9 @@ body.overflow-hidden {
   width: 35px;
   cursor: pointer;
   z-index: 1000;
-  position: absolute;
+
+  /*position: absolute;*/
+
   right: 38px;
   top: 50px;
 }
@@ -533,8 +537,16 @@ section .circle2 {
   display: none;
 }
 
-<<<<<<< HEAD
 /* Modal box styles */
+
+.popup-modal {
+  padding: 30px;
+  z-index: 10000;
+  position: absolute;
+  overflow: hidden;
+  position: fixed;
+  transition: all 0.5s ease;
+}
 
 .modal-container {
   background: rgba(255, 255, 255, 0.16);
@@ -611,12 +623,21 @@ section .circle2 {
   color: #fff;
   text-decoration: none;
   width: max-content;
-=======
+}
+
+.modal-footer .span {
+  margin-right: 5px;
+}
+
 #modal-close {
   cursor: pointer;
   border: none;
   background-color: transparent;
->>>>>>> 4d5243d7681f4900564bbe3dc6c071e61a771633
+}
+
+.wrapper.blur > *:not(.modal-popup) {
+  filter: blur(25px);
+  -webkit-filter: blur(25px);
 }
 
 @media screen and (min-width: 992px) {
@@ -721,6 +742,11 @@ section .circle2 {
 
   .recent-work .work1 {
     display: flex;
+    z-index: 100;
+  }
+
+  .work1:nth-child(even) {
+    flex-direction: row-reverse;
   }
 
   .recent-work .work1:hover {
@@ -854,12 +880,6 @@ section .circle2 {
   }
 
   /* Modal styles*/
-
-  .popup-modal {
-    background: transparent;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-  }
 
   .modal-close {
     display: flex;

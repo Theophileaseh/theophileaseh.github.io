@@ -4,40 +4,40 @@ const projects = [
     name: 'Multi-Post Stories',
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text. ",
-    featured_image: 'img.webp',
+    featured_image: 'detail-img.svg',
     technologies: ['css', 'html', 'bootstrap', 'ruby'],
     live_link: '#',
     source_link: '#',
     circle: 'circle3',
   },
   {
-    id: 1,
+    id: 2,
     name: 'Multi-Post Stories',
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text. ",
-    featured_image: 'img.webp',
+    featured_image: 'detail-img.svg',
     technologies: ['css', 'html', 'bootstrap', 'ruby'],
     live_link: '#',
     source_link: '#',
     circle: 'circle4',
   },
   {
-    id: 1,
+    id: 3,
     name: 'Multi-Post Stories',
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text. ",
-    featured_image: 'img.webp',
+    featured_image: 'detail-img.svg',
     technologies: ['css', 'html', 'bootstrap', 'ruby'],
     live_link: '#',
     source_link: '#',
     circle: 'circle5',
   },
   {
-    id: 1,
+    id: 4,
     name: 'Multi-Post Stories',
     description:
       "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text. ",
-    featured_image: 'img.webp',
+    featured_image: 'detail-img.svg',
     technologies: ['css', 'html', 'bootstrap', 'ruby'],
     live_link: '#',
     source_link: '#',
@@ -47,6 +47,7 @@ const projects = [
 
 const projectsContainer = document.getElementById('projects-container');
 const modal = document.getElementById('project-modal');
+//const stopScroll = document.querySelector('.wrapper');
 
 const allProjects = projects
   .map((project) => {
@@ -86,9 +87,11 @@ const showModal = (projectId) => {
     if(projectId === element.id) {
       return true;
     }
+    
   });
 
   modal.innerHTML = modalTemplate(modalData);
+  $('.wrapper').addClass('blur');
 
 };
 
@@ -122,6 +125,15 @@ const modalTemplate = (project) => {
             }
           </ul>
         </div>
+        <div class="modal-footer">
+          <a href = "#" class = "modal-btn">
+            <span class = "span">See live</span>
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href = "#" class = "modal-btn">
+            <span class = "span">See source</span>
+            <i class="fa-brands fa-github"></i>
+          </a>
       </div>
 
   `;
@@ -129,4 +141,5 @@ const modalTemplate = (project) => {
 
 const modalClose = (source) => {
   modal.innerHTML = ""; 
+  $('.wrapper').removeClass('blur');
 }
