@@ -61,19 +61,15 @@ const allProjects = projects
           <p class="desc1">
             ${project.description}
           </p>
-          <ul class="main-works">${project.technologies.map((technology) => "<li class='works'>" + technology + "</li>").join('')}
+          <ul class="main-works">${project.technologies.map((technology) => `<li class='works'>${technology}</li>`).join('')}
           </ul>
           <div class="button">
-              <button onclick="showModal(${
-                project.id
-              })" class="main-button">See Project</button>
+              <button onclick="showModal(${project.id})" class="main-button">See Project</button>
           </div>
         </div>
       </div>
       <div class="${project.circle}"></div>
-  `
-  )
-  .join('');
+  `).join('');
 
 projectsContainer.innerHTML = allProjects;
 
@@ -100,9 +96,10 @@ const modalTemplate = (project) => `
             ${project.description}
           </p>
           <ul class="technologies">
-            ${project.technologies.map((technology) => {
-              return `<li class="technology">${technology}</li>`;
-            })}
+            ${project.technologies.map((technology) => `
+                <li class="technology">
+                  ${technology}
+                </li>`).join('')}
           </ul>
         </div>
         <div class="modal-footer">
