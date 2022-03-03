@@ -1,6 +1,6 @@
 body {
   background: #191765;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   margin: 0;
   padding: 0;
@@ -41,7 +41,7 @@ body.overflow-hidden {
 
 .mobile-button {
   display: block;
-  background-image: url("./images/Icon-Menu.svg");
+  background-image: url('./images/Icon-Menu.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -54,7 +54,7 @@ body.overflow-hidden {
 }
 
 .mobile-button.active {
-  background-image: url("./images/Icon-Cancel.svg");
+  background-image: url('./images/Icon-Cancel.svg');
   height: 25px;
   width: 25px;
 }
@@ -87,7 +87,7 @@ body.overflow-hidden {
   align-items: flex-start;
   background: #191765;
   z-index: 100;
-  background-image: url("./images/shapemobilemenu-2.svg"), url("./images/shapemobilemenu-1.svg");
+  background-image: url('./images/shapemobilemenu-2.svg'), url('./images/shapemobilemenu-1.svg');
   background-repeat: no-repeat;
   background-position: left top 80px, right bottom 50px;
   padding-top: 108px;
@@ -869,11 +869,17 @@ section .circle2 {
     color: #7d73fc;
     background-color: #fff;
   }
+<<<<<<< HEAD
   
+=======
+
+  /* Modal styles */
+
+>>>>>>> 280458a946fea17414cb80c70e1f5d3a652ae33f
   .modal-close {
     display: flex;
   }
-  
+
   .modal-body .modal-desc {
     margin-left: 236px;
     margin-right: 236px;

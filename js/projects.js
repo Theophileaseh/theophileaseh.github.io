@@ -50,8 +50,8 @@ const modal = document.getElementById('project-modal');
 const stopScroll = document.querySelector('.wrapper');
 
 const allProjects = projects
-  .map((project) => {
-    return `
+  .map(
+    (project) => `
         <div class="work1">
         <div class="img1">
           <img src="images/${project.featured_image}" class="image" alt="software-portfolio">
@@ -61,8 +61,7 @@ const allProjects = projects
           <p class="desc1">
             ${project.description}
           </p>
-          <ul class="main-works">${project.technologies.map((technology) => { return `<li class="works">${technology}</li>`;
-              }).join('')}
+          <ul class="main-works">${project.technologies.map((technology) => `<li class='works'>${technology}</li>`).join('')}
           </ul>
           <div class="button">
               <button onclick="showModal(${project.id})" class="main-button">See Project</button>
@@ -70,26 +69,12 @@ const allProjects = projects
         </div>
       </div>
       <div class="${project.circle}"></div>
-  `;
-  })
-  .join('');
+  `,
+  ).join('');
 
 projectsContainer.innerHTML = allProjects;
 
-const showModal = () => {
-  const modalData = projects.find((element) => {
-    if (projectId === element.id) {
-      return true;
-    }
-    
-  });
-
-  modal.innerHTML = modalTemplate(modalData);
-  stopScroll.classList.add('blur');
-};
-
-const modalTemplate = (project) => {
-  return `
+const modalTemplate = (project) => `
       <div class="modal-container">
         <div class="modal-head">
           <h2 class="modal-title">${project.name}</h2>
@@ -111,8 +96,10 @@ const modalTemplate = (project) => {
             ${project.description}
           </p>
           <ul class="technologies">
-            ${project.technologies.map((technology) => { 
-              return `<li class="technology">${technology}</li>`; })}
+            ${project.technologies.map((technology) => `
+                <li class="technology">
+                  ${technology}
+                </li>`).join('')}
           </ul>
         </div>
         <div class="modal-footer">
@@ -125,11 +112,25 @@ const modalTemplate = (project) => {
             <i class="fa-brands fa-github"></i>
           </a>
       </div>
-
   `;
+
+/* eslint-disable no-unused-vars */
+
+const showModal = (projectId) => {
+  const modalData = projects.find((element) => {
+    if (Number(projectId) === Number(element.id)) {
+      return true;
+    }
+    return undefined;
+  });
+
+  modal.innerHTML = modalTemplate(modalData);
+  stopScroll.classList.add('blur');
 };
 
 const modalClose = (source) => {
-  modal.innerHTML = ''; 
+  modal.innerHTML = '';
   stopScroll.classList.remove('blur');
 };
+
+/* eslint-disable no-unused-vars */
