@@ -3,6 +3,7 @@ const form = document.getElementById('desktop-form');
 //const lastName = document.getElementById('last-name');
 //const name = document.getElementById('name');
 const email = document.getElementById('desktop-email');
+const errorMessage = document.querySelector('#error');
 
 console.log('form linked');
 
@@ -19,15 +20,13 @@ function checkInputs() {
     //const lastnameValue = firstName.value.trim();
     //const nameValue = name.value.trim();
     const emailValue = email.value.trim();
-<<<<<<< HEAD
-=======
     console.log(emailValue);
->>>>>>> 30d92d86c7c9493a802918bd18bac01200dd82e3
     const lowerEmail = emailValue.toLowerCase();
 
 
     if (emailValue !== lowerEmail) {
         setErrorFor(email, 'Email should be in lowercase');
+        //errorMessage.classList.add('error');
         return false;
     } else {
         return true;
@@ -41,4 +40,6 @@ function setErrorFor(input, message) {
     small.innerText = message;
 
     formControl.className = 'form-control error';
+    errorMessage.classList.add('smallerror');
+    form.classList.add('formerror');
 }

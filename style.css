@@ -637,15 +637,26 @@ section .circle2 {
   position: fixed;
 }
 
-small {
+#error {
   text-align: center;
   margin-top: 10px;
-  visibility: hidden;
+  color: red;
 }
 
-.form.error small {
-  visibility: visible;
-  color: red;
+.forcontainer {
+  align-items: center;
+}
+
+.smallerror {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.formerror {
+  display: grid;
+  width: 75%;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 992px) {
