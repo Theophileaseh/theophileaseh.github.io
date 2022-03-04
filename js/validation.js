@@ -13,9 +13,8 @@ function checkInputs() {
     //const lastnameValue = firstName.value.trim();
     //const nameValue = name.value.trim();
     const emailValue = email.value.trim();
-    const lowerEmail = email.toLowerCase();
+    const lowerEmail = emailValue.toLowerCase();
 
-    console.log("OK");
 
     if (emailValue !== lowerEmail) {
         setErrorFor(email, 'Email should be in lowercase');
