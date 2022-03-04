@@ -632,6 +632,17 @@ section .circle2 {
   position: fixed;
 }
 
+small {
+  text-align: center;
+  margin-top: 10px;
+  visibility: hidden;
+}
+
+.form.error small {
+  visibility: visible;
+  color: red;
+}
+
 @media screen and (min-width: 992px) {
   .header header {
     padding-left: 90px;

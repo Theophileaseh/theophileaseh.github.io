@@ -193,8 +193,8 @@
         <div class="form">
           <form
             method="post"
-            action="https://formspree.io/f/mknyrjkd"
-            class="form"
+            action=""
+            class="form" id="mobile-form"
           >
             <input
               type="text"
@@ -202,7 +202,7 @@
               placeholder="Text Input"
               required
               maxlength="30"
-              class="input"
+              class="input" id="name"
             />
             <input
               type="email"
@@ -210,15 +210,16 @@
               required
               class="input"
               value="jeremy@gmail.com"
-              placeholder="email"
+              placeholder="email" id="email"
             />
             <textarea
               placeholder="Enter Text Here"
               maxlength="500"
-              class="textarea"
+              class="textarea" id="message"
               required
             ></textarea>
             <input type="submit" class="submit-btn" value="See Project" />
+            <small>Error Message</small>
           </form>
         </div>
         <div class="divider"></div>
@@ -264,9 +265,8 @@
         </p>
         <div class="form">
           <form
-            method="post"
-            action="https://formspree.io/f/mknyrjkd"
-            class="form"
+           
+            class="form" id="desktop-form"
           >
             <ul class="inputs">
               <li class="list-input">
@@ -276,7 +276,7 @@
                   placeholder="First Name"
                   required
                   maxlength="30"
-                  class="input first-name"
+                  class="input first-name" id="first-name"
                   value="Jeremy"
                 />
               </li>
@@ -287,7 +287,7 @@
                   placeholder="Last Name"
                   required
                   maxlength="30"
-                  class="input last-name"
+                  class="input last-name" id="last-name"
                 />
               </li>
             </ul>
@@ -296,15 +296,16 @@
               name="email"
               required
               class="input"
-              placeholder="Email Address"
+              placeholder="Email Address" id="email"
             />
             <textarea
               placeholder="Write your message here"
               maxlength="500"
-              class="textarea"
+              class="textarea" id="message"
               required
             ></textarea>
             <input type="submit" class="submit-btn" value="Send" />
+            <small>Error Message</small>
           </form>
         </div>
         <div class="divider"></div>
@@ -345,5 +346,6 @@
 
     <script src="js/menu.js"></script>
     <script src="js/projects.js"></script>
+    <script src="js/validation.js"></script>
   </body>
 </html>
