@@ -7,8 +7,8 @@ const errorMessage = document.querySelector('#error');
 
 function setErrorFor(input, message) {
   const formControl = input.parentElement;
-  const small = formControl.querySelector('small');    
-  small.innerText = message;    
+  const small = formControl.querySelector('small');
+  small.innerText = message;
   formControl.className = 'form-control error';
   errorMessage.classList.add('smallerror');
   form.classList.add('formerror');
