@@ -12,7 +12,6 @@ function setErrorFor(input, message) {
 }
 
 function checkInputs() {
-
   const emailValue = email.value.trim();
   const lowerEmail = emailValue.toLowerCase();
 
