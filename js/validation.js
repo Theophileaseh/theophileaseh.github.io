@@ -1,8 +1,5 @@
 const form = document.getElementById('desktop-form');
-// const firstName = document.getElementById('first-name');
-// const lastName = document.getElementById('last-name');
-// const name = document.getElementById('name');
-const email = document.getElementById('desktop-email');
+const email = document.getElementById('desktop_email');
 const errorMessage = document.querySelector('#error');
 
 function setErrorFor(input, message) {
@@ -15,9 +12,7 @@ function setErrorFor(input, message) {
 }
 
 function checkInputs() {
-  // const firstnameValue = firstName.value.trim();
-  // const lastnameValue = firstName.value.trim();
-  // const nameValue = name.value.trim();
+
   const emailValue = email.value.trim();
   const lowerEmail = emailValue.toLowerCase();
 

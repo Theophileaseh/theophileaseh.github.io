@@ -28,6 +28,9 @@
 
 To get a local copy up and running follow these simple example steps.
 
+git clone https://github.com/Theophileaseh/theophileaseh.github.io.git
+cd theophileaseh.github.io
+
 ### Prerequisites
 
 ### Setup
