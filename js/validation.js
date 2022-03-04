@@ -7,14 +7,6 @@ const errorMessage = document.querySelector('#error');
 
 console.log('form linked');
 
-form.addEventListener('submit', (e) => {
-    if(checkInputs()) {
-        ;
-    } else {
-        e.preventDefault();
-    }
-});
-
 function checkInputs() {
     //const firstnameValue = firstName.value.trim();
     //const lastnameValue = firstName.value.trim();
@@ -26,20 +18,26 @@ function checkInputs() {
 
     if (emailValue !== lowerEmail) {
         setErrorFor(email, 'Email should be in lowercase');
-        //errorMessage.classList.add('error');
-        return false;
-    } else {
-        return true;
-    }
+    return false;
+    } 
+    return true;
 }
+
+form.addEventListener('submit', (e) => {
+    if(checkInputs()) {
+    ;
+  } else {
+    e.preventDefault();
+  }
+});
 
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
     const small = formControl.querySelector('small');
-
+  
     small.innerText = message;
-
+  
     formControl.className = 'form-control error';
     errorMessage.classList.add('smallerror');
     form.classList.add('formerror');
-}
+  }
