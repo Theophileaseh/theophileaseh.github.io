@@ -527,6 +527,11 @@ section .circle2 {
   text-decoration: none;
 }
 
+.footer .email:hover {
+  font-size: 25px;
+  transition: 0.5s ease-out;
+}
+
 .desktop-footer {
   display: none;
 }

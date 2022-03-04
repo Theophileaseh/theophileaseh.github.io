@@ -1,7 +1,7 @@
-const form = document.querySelector('.form');
-const firstName = document.getElementById('first-name');
-const lastName = document.getElementById('last-name');
-const name = document.getElementById('name');
+const form = document.querySelector('form');
+//const firstName = document.getElementById('first-name');
+//const lastName = document.getElementById('last-name');
+//const name = document.getElementById('name');
 const email = document.getElementById('email');
 
 form.addEventListener('submit', (e) => {
@@ -9,11 +9,13 @@ form.addEventListener('submit', (e) => {
 });
 
 function checkInputs() {
-    const firstnameValue = firstName.value.trim();
-    const lastnameValue = firstName.value.trim();
-    const nameValue = name.value.trim();
+    //const firstnameValue = firstName.value.trim();
+    //const lastnameValue = firstName.value.trim();
+    //const nameValue = name.value.trim();
     const emailValue = email.value.trim();
     const lowerEmail = email.toLowerCase();
+
+    console.log("OK");
 
     if (emailValue !== lowerEmail) {
         setErrorFor(email, 'Email should be in lowercase');
