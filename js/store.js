@@ -1,11 +1,11 @@
 function store() { // stores items in the localStorage
   const names = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
+  const email1 = document.getElementById('email').value;
+  const message1 = document.getElementById('message').value;
   const firstName = document.getElementById('first_name').value;
   const lastName = document.getElementById('last_name').value;
   const desktopEmail = document.getElementById('desktop_email').value;
-  const message2 = document.getElementById('message2').value;
+  const messageTwo = document.getElementById('message2').value;
   const submitted = {
     name: names,
     email: email1,
@@ -13,13 +13,13 @@ function store() { // stores items in the localStorage
     first_name: firstName,
     last_name: lastName,
     desktop_email: desktopEmail,
-    message2: message2,
+    message2: messageTwo,
   };
-  let key = '';
-  window.localStorage.setItem(key,JSON.stringify(submitted));
+  const key = '';
+  window.localStorage.setItem(key, JSON.stringify(submitted));
   // converting object to string
 }
-function retrieveRecords () { // retrieves items in the localStorage
+function retrieveRecords() { // retrieves items in the localStorage
   const key = document.getElementById('retrieveKey').value; // gets key from user
   const records = window.localStorage.getItem(key); // searches for the key in localStorage
   const paragraph = document.createElement('p');
@@ -32,7 +32,7 @@ function removeItem() { // deletes item from localStorage
   const key = document.getElementById('removeKey').value; // gets key from user
   localStorage.removeItem(key); // passes key to the removeItem method
 }
-function clearStorage (){ // clears the entire localStorage
+function clearStorage() { // clears the entire localStorage
   localStorage.clear();
 }
 window.onload = function bar() { // ensures the page is loaded before functions are executed.
