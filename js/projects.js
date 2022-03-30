@@ -61,7 +61,7 @@ const projects = [
       "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text. ",
     featured_image: 'tc-design.svg',
     technologies: ['css', 'html', 'bootstrap', 'ruby'],
-    live_link: 'http://tcdesign.fashion/',
+    live_link: 'https://tcdesign.fashion/',
     source_link: '#',
     circle: 'circle4',
   },
@@ -72,7 +72,7 @@ const projects = [
       "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a standard dummy text. ",
     featured_image: 'hitl.svg',
     technologies: ['css', 'html', 'bootstrap', 'ruby'],
-    live_link: '#',
+    live_link: 'https://hitlbamenda.cm',
     source_link: '#',
     circle: 'circle5',
   },
@@ -136,11 +136,11 @@ const modalTemplate = (project) => `
           </ul>
         </div>
         <div class="modal-footer">
-          <a href = "#" class = "modal-btn">
+          <a href = "${project.live_link}" class = "modal-btn">
             <span class = "span">See live</span>
             <i class="fa-brands fa-github"></i>
           </a>
-          <a href = "#" class = "modal-btn">
+          <a href = "${project.source_link}" class = "modal-btn">
             <span class = "span">See source</span>
             <i class="fa-brands fa-github"></i>
           </a>
